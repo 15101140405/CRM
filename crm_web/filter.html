@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>筛选</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<link href="css/base.css" rel="stylesheet" type="text/css" />
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<article id="filter">
+  <div class="tool_bar">
+    <div class="l_btn" data-icon="&#xe679;"></div>
+    <h2 class="page_title">筛选</h2>
+    <!-- 筛选按钮 用户类型为“收银”时，隐藏该按钮 -->
+    <div class="r_btn">确定</div>
+  </div>
+  <div class="select_ulist_module">
+    <ul class="select_ulist">
+      <li class="select_ulist_item check_box check_box_ckd">婚礼</li>
+      <li class="select_ulist_item check_box">会议</li>
+    </ul>
+  </div>
+  <div class="select_ulist_module">
+    <ul class="select_ulist">
+      <li class="select_ulist_item list_more slide_btn">月份</li>
+    </ul>
+</article>
+<article  class="slide_page" id="filter_month">
+  <div class="tool_bar">
+    <div class="l_btn" data-icon="&#xe679;"></div>
+    <h2 class="page_title">筛选</h2>
+    <!-- 筛选按钮 用户类型为“收银”时，隐藏该按钮 -->
+    <div class="r_btn">确定</div>
+  </div>
+  <div class="select_ulist_module">
+    <ul class="select_ulist">
+      <li class="select_ulist_item check_box check_box_ckd">8月</li>
+      <li class="select_ulist_item check_box">9月</li>
+    </ul>
+  </div>
+</article>
+<script src="js/zepto.min.js"></script>
+<script>
+  $('.slide_btn').on('click',function(){
+    $('.slide_page').addClass('show')
+  })
+</script>
+</body>
+</html>

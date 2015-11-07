@@ -1,0 +1,577 @@
+/* 公共组件样式 */
+.int_bar input{
+  width: 100%;
+}
+.btn{
+  display: block;
+  padding: 0 10px;
+  border-radius: 4px;
+  background: #fff;
+  color: #c3c3c3;
+  font-size: 18px;
+  text-align: center;
+  line-height: 41px;
+}
+.check_box{
+  position: relative;
+}
+.check_box:after{
+  display: block;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  content: '\e6d5';
+  font-family: 'iconfont';
+  font-size: 2rem;
+  line-height: 2rem;
+  color: #c3c3c3;
+}
+.check_box_ckd:after{
+  content: '\e6d4';
+  font-family: 'iconfont';
+  color: #00b90c;
+}
+.select{
+  position: relative;
+}
+.select:after{
+  display: block;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  content: '\e645';
+  font-family: 'iconfont';
+  font-size: 2rem;
+  line-height: 2rem;
+  color: #c3c3c3;
+}
+.select_selected:after{
+  content: '\e645';
+  font-family: 'iconfont';
+  color: #00b90c;
+}
+.round_select{
+  position: relative;
+}
+.round_select:after{
+  display: block;
+  position: absolute;
+  top: 1rem;
+  content: '\e6d7';
+  font-family: 'iconfont';
+  font-size: 2rem;
+  line-height: 2rem;
+  color: #c3c3c3;
+}
+.round_select_selected:after{
+  content: '\e657';
+  font-family: 'iconfont';
+  color: #00b90c;
+}
+.list_more{
+  position: relative;
+}
+.list_more:after{
+  display: block;
+  position: absolute;
+  top: 1rem;
+  right: 0;
+  font-family: 'iconfont';
+  content: '\f0116';
+  text-align: center;
+  font-size: 2rem;
+  line-height: 2rem;
+  color: #c3c3c3;
+}
+.bottom_fixed_bar{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 5rem;
+  background: #fff;
+  border-top: 1px solid #c3c3c3;
+}
+.bottom_fixed_bar .r_btn{
+  display: inline-block;
+  float: right;
+  margin: 1rem 1rem 0 0;
+  padding: 0 2rem;
+  background: #00b90c;
+  border: 1px solid #e5e5e5;
+  border-radius: 0.5rem;
+  line-height: 3rem;
+  font-size: 1.5rem;
+  color: #fff;
+}
+/* 组件 */
+.tab_module{
+  display: flex;
+}
+.tab_module .tab_btn {
+    margin: 0;
+    flex: 1.0;
+    border-bottom: 1px solid #ccc;
+    background: #fff;
+    text-align: center;
+}
+.tab_module .act span,
+.tab_module .tab_btn span:hover {
+    border-bottom: 4px solid #00b90c;
+    color: #00b90c;
+}
+.tab_module .tab_btn span {
+    display: inline-block;
+    margin-bottom: -1px;
+    padding: 0 0.5rem;
+    line-height: 3.2rem;
+}
+.tool_bar{
+  position: relative;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #c3c3c3;
+  background: #00b90c;
+  text-align: center;
+  color: #fff;
+}
+.tool_bar .page_title{
+  padding: 0 4.5rem;
+  line-height: 4.5rem;
+  font-size: 1.7rem;
+}
+.tool_bar select{
+  background: #00b90c;
+  color: #fff;
+}
+.tool_bar .l_btn{
+  position: absolute;
+  padding: 0.75rem 1rem;
+  top: 0.5rem;
+  left: 0;
+  width: 2rem;
+  height: 2rem;
+  text-align: center;
+  line-height: 2rem;
+}
+.tool_bar .r_btn{
+  position: absolute;
+  padding: 0.75rem 1rem;
+  top: 0.5rem;
+  right: 0;
+  width: 2.5rem;
+  height: 2rem;
+  text-align: center;
+  line-height: 2rem;
+}
+.slide_page {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(229,229,229,1.0);
+  overflow-y: auto;
+  z-index: 2;
+  transform: translate3d(100%,0,0);
+  transition: all .5s;
+}
+.slide_page.show {
+  transform: translate3d(0,0,0);
+  transition: all .5s;
+}
+.module_title{
+  padding: 0 1rem;
+  border-bottom: 1px solid #e5e5e5;
+  line-height: 3.9rem;
+  font-size: 1.7rem;
+  color: #333;
+}
+.ulist_module{
+  margin-bottom: 1rem;
+  background: #fff;
+  font-size: 1.5rem;
+}
+.ulist{
+  padding: 0 0 0 1rem;
+  overflow: hidden;
+}
+.ulist_item {
+  border-bottom: 1px solid #e5e5e5;
+  line-height: 4rem;
+  overflow: hidden;
+}
+.ulist_item:last-child{
+  border-bottom: none;
+}
+.select_ulist_module{
+  margin-bottom: 1rem;
+  background: #fff;
+  font-size: 1.5rem;
+}
+.select_ulist{
+  padding: 0 0 0 1rem;
+  overflow: hidden;
+}
+.select_ulist_item {
+  border-bottom: 1px solid #e5e5e5;
+  line-height: 4rem;
+}
+.select_ulist_item:last-child{
+  border-bottom: none;
+}
+.select_ulist .list_more:after{
+  right: 1rem;
+}
+.int_ulist_module{
+  margin-bottom: 1rem;
+  background: #fff;
+  font-size: 1.5rem;
+}
+.int_ulist{
+  overflow: hidden;
+}
+.int_ulist_item{
+  display: flex;
+  padding: 0 1rem;
+  border-bottom: 1px solid #e5e5e5;
+  background: #fff;
+  line-height: 4rem;
+}
+.int_ulist_item:last-child{
+  border-bottom: none;
+}
+.int_ulist_item .prop{
+  display: block;
+  float: left;
+}
+.int_ulist_item .int_bar{
+  margin-left: 1rem;
+  flex: 1;
+}
+.pic_ulist_module{
+  margin-bottom: 1rem;
+  background: #fff;
+}
+.pic_ulist{
+  overflow: hidden;
+  padding: 0 1rem;
+}
+.pic_ulist_item{
+  float: left;
+  margin-bottom: 1rem;
+  width: 50%;
+  text-align: center;
+  font-size: 1.5rem;
+}
+.pic_ulist_item:after{
+  
+}
+.pic_ulist_item:nth-child(2n-1) .img_bar{
+  margin-bottom: 0.5rem;
+  padding-left: 1.5rem;
+  padding-right: 0.5rem;
+}
+.pic_ulist_item:nth-child(2n) .img_bar{
+  margin-bottom: 0.5rem;
+  padding-left: 2rem;
+}
+/* 日订单模块 */
+.header{
+  position: relative;
+  border-bottom: 1px solid #c3c3c3;
+  background: #fff;
+  text-align: center;
+}
+.header .page_title{
+  padding: 0 4.5rem;
+  line-height: 5.5rem;
+  font-size: 1.7rem;
+}
+.header select{
+  background: #fff;
+}
+.header .r_btn{
+  position: absolute;
+  padding: 0.75rem;
+  top: 1rem;
+  right: 1rem;
+  width: 2rem;
+  height: 2rem;
+  text-align: center;
+  line-height: 2rem;
+  color: #00b90c;
+}
+.day_order_module{
+  border-top: 1px solid #c3c3c3;
+  background: #fff;
+}
+.day_order_module li{
+  position: relative;
+  padding: 1.5rem 0; 
+}
+.order_categroy{
+  position: absolute;
+  top: 1.5rem;
+  left: 0;
+  padding: 0 1rem;
+  border-right: 1px solid #c3c3c3;
+  line-height: 2rem;
+  font-size: 1.5rem;
+}
+.order_desc{
+  padding: 0 6rem;
+}
+.order_manager{
+  position: absolute;
+  top: 1.5rem;
+  right: 1rem;
+  padding: 0 1rem;
+  background: #00b90c;
+  border-radius: 1rem;
+  line-height: 1.8rem;
+  color: #333;
+}
+.consumer{
+  margin-bottom: 0.25rem;
+  font-size: 1.2rem;
+  text-align: center;
+  font-weight: 700;
+}
+.day_order_module .progress_bar{
+  height: 0.6rem;
+  overflow: hidden;
+  border: 1px solid #e5e5e5;
+  border-radius: 1rem;
+}
+.day_order_module .progress{
+  height: 0.6rem;
+  background: #00b90c;
+}
+
+.add_customer{
+  margin-bottom: 1rem;
+  border: 1px solid #e5e5e5;
+  border-radius: 5px;
+  line-height: 3.5rem;
+  color: #333;
+  font-size: 1.4rem;
+}
+.order_list{}
+.order_info{
+  padding: 0.5rem 0;
+  margin-right: 25%;
+}
+.order_status{
+  float: right;
+  margin: 1.7rem 1rem 1.7rem 1rem;
+  width: 7rem;
+  border: 1px solid #e5e5e5;
+  border-radius: 1.2rem;
+  line-height: 2.5rem;
+  text-align: center;
+}
+.status_gray{
+  border: 1px solid #e5e5e5;
+  background: #e5e5e5;
+  color: #333;
+}
+.status_green{
+  border: 1px solid #00b90c;
+  background: #00b90c;
+  color: #fff;
+}
+.status_white{
+  border: 1px solid #00b90c;
+  background: #fff;
+  color: #00b90c;
+}
+.status_orange{
+  border: 1px solid #f0c43e;
+  background: #f0c43e;
+  color: #fff;
+}
+.order_list .customer{
+  line-height: 3rem;
+}
+.order_list .desc{
+  line-height: 2rem;
+  font-size: 1.2rem;
+  color: #c3c3c3;
+}
+
+.order_detail_banner{
+  position: relative;
+  padding: 1rem;
+  background: #fff;
+  color: #333;
+}
+.abs_back_btn{
+  position: absolute;
+  top: 0.5rem;
+  left: 0;
+  width: 3rem;
+  height: 3rem;
+  line-height: 3rem;
+}
+.order_detail_banner .title{
+  line-height: 3.5rem;
+  text-align: center;
+  font-size: 1.7rem;
+}
+.order_detail_banner .desc{
+  margin-bottom: 2rem;
+  text-align: center;
+  color: #999;
+}
+.icon_btn_bar{
+  padding: 0 3rem 0.5rem 3rem;
+  display: flex;
+  overflow: hidden;
+}
+.icon_btn{
+  display: block;
+  flex: 1;
+  text-align: center;
+  font-size: 1.5rem;
+  color: #333;
+}
+.icon_btn:before{
+  margin-bottom: 1rem;
+  font-size: 3.5rem;
+  color: #00b90c;
+}
+.tab_btn_module{
+  display: flex;
+  overflow: hidden;
+  margin: 1.8rem 4rem;
+  border: 1px solid #00b90c;
+  border-radius: 0.4rem;
+  text-align: center;
+}
+.tab_btn_module .tab_btn{
+  flex: 1;
+  background: #fff;
+  color: #00b90c;
+  line-height: 2rem;
+  font-size: 1.6rem;
+}
+.tab_btn_module .active{
+  background: #00b90c;
+  color: #fff;
+}
+.tab_panel{
+  padding: 0 3rem;
+}
+.v_time_line li{
+  padding: 1rem 0 0 2.5rem;
+  border-left: 0.1rem solid #ccc;
+}
+.v_time_line li:first-child{
+  padding-top: 0;
+  color: #3aa11a;
+}
+.v_time_line li:first-child .action:before{
+  width: 2rem;
+  height: 2rem;
+  top: -0.5rem;
+  left: -3.5rem;
+  color: #3aa11a;
+  font-size: 2rem;
+  line-height: 2rem;
+}
+.v_time_line .desc{
+  padding-bottom: 1rem;
+  border-bottom: 0.1rem solid #ccc;
+}
+.v_time_line li:last-child .desc{
+  border-bottom: none;
+}
+.v_time_line .action{
+  position: relative;
+  margin: 0 0 0.5rem 0;
+  font-size: 1.4rem;
+}
+.v_time_line .action:before{
+  position: absolute;
+  top: 0rem;
+  left: -3.3rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  color: #ccc;
+  content: '\e65e';
+  font-family: 'iconfont';
+  font-size: 1.5rem;
+  text-align: center;
+  line-height: 1.5rem;
+}
+.v_time_line .time{
+  margin: 0;
+  color: #999;
+  font-size: 1.2rem;
+}
+.v_time_line .action a {
+    text-decoration: underline;
+    color: #197fe7;
+}
+.fixed_add_btn{
+  position: fixed;
+  margin-left: -1.5rem;
+  left: 50%;
+  bottom: 2rem;
+  width: 3rem;
+  height: 3rem;
+  background: #fff;
+  border: 0.15rem solid #00b90c;
+  border-radius: 100rem;
+  text-align: center;
+  line-height: 3rem;
+  font-size: 2.5rem;
+  color: #00b90c;
+}
+.tab_panel .item{
+  padding-bottom: 1rem;
+}
+.tab_panel .item .title{
+  margin-bottom: 0.5rem;
+  font-size: 1.6rem;
+}
+.tab_panel p{
+  margin-bottom: 0.5rem;
+}
+
+.contacts_ulist_module{
+
+}
+.contacts_index{
+  padding: 0 1rem;
+  line-height: 2rem;
+  color: #999;
+}
+.contacts_item{
+  padding: 0 0 0 1rem;
+  background: #fff;
+  overflow: hidden;
+}
+.contacts_item .img_bar{
+  float: left;
+  margin-right: 1rem;
+  padding: 0.5rem 0;
+  width: 4rem;
+  height: 4rem;
+}
+.contacts_info{
+  margin-left: 5rem;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #ccc;
+}
+.contacts_item:last-child .contacts_info{
+  border: none;
+}
+.contacts_info .contacts{
+  font-size: 1.4rem;
+  line-height: 2.5rem;
+}
+.contacts_info .remark{
+  color: #999;
+  line-height: 1.5rem;
+}

@@ -1,0 +1,123 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>CRM</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<link href="css/base.css" rel="stylesheet" type="text/css" />
+<link href="css/calendar.css" rel="stylesheet" type="text/css" />
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+  <div class="header">
+    <h2 class="page_title">
+      <select>
+      <!-- 当用户类型为“前台”时，不可选 用户类型为“策划”／“收银”时，循环出所有酒店 -->
+      <!-- <select disabled="disabled"> -->
+        <option>xxx酒店（酒店名称)</option>
+        <option>伊缘圆婚礼主题酒店</option>
+      </select>
+    </h2>
+    <!-- 筛选按钮 用户类型为“收银”时，隐藏该按钮 -->
+    <div class="r_btn" data-icon="&#xe69c;"></div>
+  </div>
+  <!-- 日历 -->
+  <section class="calendar" id="calendar" data-id="2">
+    <div class="month_control">
+      <span class="prev" id="prev_m" data-icon="&#xf011d;"></span>
+      <h4 class="calendar_title"><span class="year">2015年</span><span class="month">8月</span></h4>
+      <span class="next" id="next_m" data-icon="&#xf011b;"></span>
+    </div>
+    <div class="date_container">
+      <ul class="week">
+        <li class="days_title weekend" data-id="6">日</li>
+        <li class="days_title" data-id="0">一</li>
+        <li class="days_title" data-id="1">二</li>
+        <li class="days_title" data-id="2">三</li>
+        <li class="days_title" data-id="3">四</li>
+        <li class="days_title" data-id="4">五</li>
+        <li class="days_title weekend" data-id="5">六</li>
+      </ul>
+      <ol class="dates">
+      </ol>
+    </div>
+  </section>
+  <!-- 预定情况 -->
+  <div class="day_order_module">
+    <h4 class="module_title">预订情况</h4>
+    <ul class="order_ulist">
+      <li>
+        <!-- 预定类型 -->
+        <span class="order_categroy">会议</span>
+        <div class="order_desc">
+          <!-- 客户信息 -->
+          <p class="consumer">北京浩瀚一方互联网科技</p>
+          <div class="progress_bar">
+            <!-- 这里我不清楚有几个执行进度，后台根据进度折算成百分比即可 -->
+            <div class="progress" style="width:100%"></div>
+          </div>
+        </div>
+        <!-- 该流程负责人信息 -->
+        <span class="order_manager">实诚</span>
+      </li>
+    </ul>
+  </div>
+
+
+
+
+<script src="js/zepto.min.js"></script>
+<script src="js/zepto.calendar.js"></script>
+<script>
+$(function() {
+
+  //日历初始化
+  $("#calendar").almanac({
+    /**
+     * 画日历之后调用函数
+     */
+    afterDrawCld: function(year, month){
+      //前端向后台传 年月，后台返回 日期
+      //为方便调试我这里注释掉请求
+      //$.get('url',{year: year, month: month},function(data){
+        var data = '9,20,29'; //模拟的返回值 string
+        var order_date = data.split(',')
+        var l = order_date.length;
+        for(i = 0; i < l; i++){
+          //前端给日历对应的日期加标记
+          $('li[data-solor="'+order_date[i]+'"]').addClass('order')
+        }
+      //})
+    },
+    /**
+     * 单击某一天的事件
+     */
+    clickDay: function(elem){
+      var _this = $(elem);
+        if(_this.hasClass('order')){
+          alert('今天已有预定，请选择其他时间');
+          return;
+        }else if(_this.hasClass('unover')){
+          return;
+        }else{
+          var order_date = _this.attr('data-year')+'-'+_this.attr('data-month')+'-'+_this.attr('data-solor');
+          //为方便调试我这里注释掉请求
+          // $.ajax({
+          //   type: 'post'
+          //   url: 'url',
+          //   data: order_date,
+          //   success:function(){
+               _this.addClass('order')
+          //   }
+          // })
+        }
+    }
+  });
+
+});
+</script>
+</body>
+</html>
