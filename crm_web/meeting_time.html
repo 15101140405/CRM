@@ -15,6 +15,7 @@
   <div class="tool_bar">
     <div class="l_btn" data-icon="&#xe679;"></div>
     <h2 class="page_title">会议</h2>
+    <div class="r_btn" data-icon="&#xe6a3;"></div>
   </div>
   <div class="select_ulist_module">
     <h4 class="module_title">会议时间</h4>
@@ -26,5 +27,12 @@
    </div>
 </article>
 <script src="js/zepto.min.js"></script>
+<script>
+//勾选操作
+$('.select_ulist_item').on('click',function(){
+        $('.select_ulist_item').removeClass('select_selected');
+        $(this).addClass('select_selected'); 
+    })
+</script>
 </body>
 </html>
