@@ -122,6 +122,11 @@ function search() {
             }
         }
     })
-	
+
+//勾选操作
+$('.select_ulist_item').on('click',function(){
+        $('.select_ulist_item').removeClass('select_selected');
+        $(this).addClass('select_selected'); 
+    })
 
 }

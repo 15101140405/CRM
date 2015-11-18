@@ -290,6 +290,17 @@
 .header select{
   background: #fff;
 }
+.header .l_btn{
+  position: absolute;
+  padding: 0.75rem;
+  top: 1rem;
+  left: 1rem;
+  width: 2rem;
+  height: 2rem;
+  text-align: center;
+  line-height: 2rem;
+  color: #00b90c;
+}
 .header .r_btn{
   position: absolute;
   padding: 0.75rem;
@@ -375,7 +386,7 @@
   background: #e5e5e5;
   color: #333;
 }
-.status_green{
+.status_d{
   border: 1px solid #00b90c;
   background: #00b90c;
   color: #fff;
@@ -388,6 +399,11 @@
 .status_orange{
   border: 1px solid #f0c43e;
   background: #f0c43e;
+  color: #fff;
+}
+.status_grey{
+  border: 1px solid #ccc;
+  background: #ccc;
   color: #fff;
 }
 .order_list .customer{
