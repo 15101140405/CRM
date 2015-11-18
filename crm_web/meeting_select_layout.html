@@ -26,19 +26,19 @@
   			</div>
   			<i>圆形</i>
   		</li>
-  		<li class="pic_ulist_item round_select round_select_selected">
+  		<li class="pic_ulist_item round_select">
   			<div class="img_bar">
   				<img src="images/meeting_layout.jpg"/>
   			</div>
   			<i>T形</i>
   		</li>
-  		<li class="pic_ulist_item round_select round_select_selected">
+  		<li class="pic_ulist_item round_select">
   			<div class="img_bar">
   				<img src="images/meeting_layout.jpg"/>
   			</div>
   			<i>方形</i>
   		</li>
-  		<li class="pic_ulist_item round_select round_select_selected">
+  		<li class="pic_ulist_item round_select">
   			<div class="img_bar">
   				<img src="images/meeting_layout.jpg"/>
   			</div>
@@ -46,12 +46,17 @@
   		</li>
   	</ul>
   </div>
-  <div class="bottom_fixed_bar">
-    <a class="r_btn">确定</a>
-  </div>
+
 </article>
 <script src="js/zepto.min.js"></script>
 <script src="js/zepto.cookie.js"></script>
+
+<script>
+$('.pic_ulist_item').on('click',function(){
+        $('.pic_ulist_item').removeClass('round_select_selected');
+        $(this).addClass('round_select_selected'); 
+    })
+</script>
 <!-- 搜索的交互方案待定 -->
 <script src="js/search.js"></script>
 </body>
