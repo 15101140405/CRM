@@ -48,6 +48,11 @@
   $('.slide_btn').on('click',function(){
     $('.slide_page').addClass('show')
   })
+//勾选操作
+  $('.select_ulist_item').on('click',function(){
+        $('.select_ulist_item').removeClass('check_box_ckd');
+        $(this).addClass('check_box_ckd'); 
+  })
 </script>
 </body>
 </html>
